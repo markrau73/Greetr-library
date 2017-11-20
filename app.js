@@ -1,3 +1,3 @@
 var g = G$('Marcin', 'Krauzowicz');
 
-console.log(g);
+g.greet().greet(true);
