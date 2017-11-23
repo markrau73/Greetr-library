@@ -1,4 +1,4 @@
-(function(global, $) {
+;(function(global, $) {
 
     var Greetr = function (firstName, lastName, language){
       return new Greetr.init(firstName, lastName, language);
@@ -7,12 +7,12 @@
     var supportLang = ['pl', 'en'];
 
     var greetings = {
-      pl: 'Czesc',
+      pl: 'Cześć',
       en: 'Hello'
     };
 
     var formalGreetings = {
-      pl: 'Dzien dobry',
+      pl: 'Dzień dobry',
       en: 'Good morning'
     };
 
@@ -66,6 +66,24 @@
         this.language = lang;
 
         this.validate();
+
+        return this;
+      },
+
+      HTMLGreeting: function(selector, formal){
+        if(!$){
+          throw 'jQuery nie zostało załadowane';
+        }
+        if(!selector){
+          throw 'Nie wybrano selektora jQuery';
+        }
+        var msg;
+        if(formal){
+          msg = this.formalGreetings();
+        } else {
+          msg = this.greeting();
+        }
+        $(selector).html(msg);
 
         return this;
       }
