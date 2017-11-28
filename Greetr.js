@@ -32,7 +32,7 @@
 
       validate: function(){
         if (supportLang.indexOf(this.language) === -1) {
-          throw "Niewlasciwy jezyk";
+          throw "Nie wybrano jezyka";
         }
       },
 
@@ -41,7 +41,7 @@
       },
 
       formalGreetings: function(){
-        return formalGreetings[this.language] + ', ' + this.fullName();
+        return formalGreetings[this.language] + ', ' + this.fullName() + '.';
       },
 
       greet: function(formal){
