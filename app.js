@@ -1,10 +1,10 @@
-var g = G$('Marcin', 'Krauzowicz');
+let g = G$('Marcin', 'Krauzowicz');
 
 g.greet().setLang('en').greet(true).log();
 
-$('#login').on('click', function(){
+$('#login').on('click', () => {
 
-  var loginGrtr = G$('Marcin', 'Krauzowicz');
+  let loginGrtr = G$('Marcin', 'Krauzowicz');
 
   $('#longdiv').hide();
 

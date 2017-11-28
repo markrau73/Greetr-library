@@ -1,24 +1,24 @@
 ;(function(global, $) {
 
-    var Greetr = function (firstName, lastName, language){
+    let Greetr = (firstName, lastName, language) =>{
       return new Greetr.init(firstName, lastName, language);
     }
 
-    var supportLang = ['pl', 'en', 'es'];
+    let supportLang = ['pl', 'en', 'es'];
 
-    var greetings = {
+    let greetings = {
       pl: 'Cześć',
       en: 'Hello',
       es: 'Hola'
     };
 
-    var formalGreetings = {
+    let formalGreetings = {
       pl: 'Dzień dobry',
       en: 'Good morning',
       es: 'Buenos dias'
     };
 
-    var logMessage = {
+    let logMessage = {
       pl: 'Zalogowany',
       en: 'Logged in',
       es: 'En linea'
@@ -26,7 +26,7 @@
 
     Greetr.prototype = {
 
-      fullName: function(){
+      fullName: function() {
         return this.firstName + ' ' + this.lastName;
       },
 
@@ -45,7 +45,7 @@
       },
 
       greet: function(formal){
-        var msg;
+        let msg;
 
         if (formal){
           msg = this.formalGreetings();
@@ -80,7 +80,7 @@
         if(!selector){
           throw 'Nie wybrano selektora jQuery';
         }
-        var msg;
+        let msg;
         if(formal){
           msg = this.formalGreetings();
         } else {
@@ -95,7 +95,7 @@
 
     Greetr.init = function (firstName, lastName, language){
 
-      var self = this;
+      let self = this;
       self.firstName = firstName || '';
       self.lastName = lastName || '';
       self.language = language || 'pl';
