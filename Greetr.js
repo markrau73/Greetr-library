@@ -4,21 +4,24 @@
       return new Greetr.init(firstName, lastName, language);
     }
 
-    var supportLang = ['pl', 'en'];
+    var supportLang = ['pl', 'en', 'es'];
 
     var greetings = {
       pl: 'Cześć',
-      en: 'Hello'
+      en: 'Hello',
+      es: 'Hola'
     };
 
     var formalGreetings = {
       pl: 'Dzień dobry',
-      en: 'Good morning'
+      en: 'Good morning',
+      es: 'Buenos dias'
     };
 
     var logMessage = {
       pl: 'Zalogowany',
-      en: 'Logged in'
+      en: 'Logged in',
+      es: 'En linea'
     };
 
     Greetr.prototype = {
